@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Natural Language Processing</title>
+		<meta name="description" content="Presentation on Natural Language Processing">
+		<meta name="author" content="Dinesh Bhattarai">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Natural Language Processing</h1>
+					<h3>Backbone of Human-Computer Interaction</h3>
+					<p>
+						<small>Created by <a href="https://dbhattarai.info.np">Dinesh Bhattarai</a></small>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2> Artificial Intelligence</h2>
+						<img data-src="img/cs-ai-stats.jpg" alt="Down arrow">
+					</section>
+					<section>
+						<img data-src="img/machine-learning.png" alt="Down arrow">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Natural Language Processing</h2>
+					</section>	
+
+					<section data-background="img/1.png">
+						<img data-src="img/comps.jpg" alt="Components" />
+					</section>
+					<section>
+						<img data-src="img/2.png" alt="Components" />
+					</section>
+					<section>
+						<img data-src="img/sentiment-analysis.png" alt="Components" />
+					</section>
+					<section>
+						<img data-src="img/kaldi-tensorflow.png">
+					</section>					
+				</section>
+
+				<section>
+					<section>
+						<h2>Speech Recognition</h2>
+						<ul>
+							<li>ngram Language Model</li>
+							<li>Markov Model and HMM</li>
+							<li>RNN and LSTM</li>
+							<li>DeepLearning</li>
+						</ul>
+					</section>
+					<section>
+							<h2>ngram</h2>
+							<p>
+								<ul>
+									<li>contiguous sequence of n items</li>
+									<li>probabilistic language model based on (n-1) markov model</li>
+									<li>predicts next item based on current n-gram sequence</li>		
+								</ul>
+							</p>
+						</section>	
+					<section>
+						<img data-src="img/ngram.png">
+					</section>
+					<section>
+						<h2>Markov Process</h2>
+						<p>
+							<ul>
+								<li>Finite State Machine</li>
+								<li>Probability of next state based on current state</li>
+								<li>
+									<small>
+										$$ P(WORD = I) * P(WORD = enjoy | PREV = I) * P(word = coffee| PREV = enjoy) $$
+									</small>	
+								</li>		
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>Hidden Markov Model</h2>
+						<p>An application of Markov Models using statistical methods</p>
+						<ul>
+							<li>Contains hidden states</li>
+							<li>Defines how to learn the weights in Markov Matrix</li>
+							<li>Uses: Classification, Clustering, Regression, etc.</li>
+						</ul>
+					</section>
+					<section>
+						<img data-src="img/hmm.jpg">
+					</section>
+					<section>
+						<h2>Recurrent Neural Networks</h2>
+						<p>Remember last prediction and give it as input to the network. Can remember only the latest information.</p>
+						<img data-src="img/RNN-unrolled.png" style="background: white">
+					</section>						
+					<section>
+							<h2>LSTM</h2>
+							<img data-src="img/LSTM3-chain.png" style="background: white">
+							<img data-src="img/LSTM2-notation.png" style="background: white">
+					</section>							
+				</section>
+				<section>
+					<section>
+						<h2> Dialogue</h2>
+						<img data-src="img/pai.png" alt="Components" />
+					</section>
+					<section>
+							<h2> Dialogue</h2>
+							<img data-src="img/dialogue.png" alt="Components" />
+						</section>	
+				</section>
+				<section>
+					<section data-background="white">
+							<h2> Machine Translation</h2>
+							<ul>
+								<li>Rule based</li>
+								<li>Transfer based</li>
+								<li>Interlingual</li>
+								<li>Dictionary based</li>
+								<li>Statistical</li>
+								<li>Example based</li>
+								<li>Hybrid MT</li>
+								<li>Nueral MT</li>
+							</ul>
+					</section>
+					<section data-background="white">
+							<img data-src="img/Direct-transfer-translation-pyramid.png">
+					</section>
+					<section data-background="white">
+							<h2> Rule Based</h2>
+							<ul>
+									<li>Linguistic rules</li>
+									<li>sentence analysis for word context</li>
+									<li>terminologies dictionaries</li>
+								</ul>	
+							<img data-src="img/Rule-based-Machine-Translation.jpg"/>
+						</section>	
+						<section data-background="white">
+							<h2> Statistical</h2>
+							<ul>
+									<li>Pattern matching</li>
+									<li>trained on human translations</li>
+									<li>terminologies dictionaries</li>
+								</ul>	
+						</section>	
+	
+						<section data-background="white">
+							<h2> Neural Based</h2>
+							<img data-src="img/rnn-machine-translation.png" alt="Components" />
+						</section>
+						<section data-background="white">
+								<h2> DeepLearning</h2>
+								<img data-src="img/deeplearn.png" alt="Components" />
+						</section>
+				</section>
+				<section>
+					<section>
+						<h2>Language Modeling and Understanding</h2>
+						<ul>
+							<li>Semantic Analysis</li>
+							<li>Discourse Integration</li>
+							<li>Pragmatic Analysis</li>
+						</ul>	
+					</section>
+					<section>
+						<h2>Semantic Analysis</h2>
+						<p>
+							draw exact or dictionary meaning from text
+						</p>
+					</section>
+					<section>
+							<h2>Discourse Integration</h2>
+							<p>
+								Associate meaning of current sentence with previos sentences. Can also infer the meaning of next sentence.
+							</p>
+					</section>
+					<section>
+							<h2>Pragmatic Analysis</h2>
+							<p>
+								reinterpret semantic meaning with real-world meaning.
+							</p>
+					</section>	
+				</section>
+
+				<section>
+					<section data-background="img/1521923106028.png">
+						<h2>Where are we?</h2>
+					</section>
+					<section data-background="white">
+							<img data-src="img/mt-status.png" alt="Down arrow">
+					</section>
+					<section data-background="white">
+							<img data-src="img/ai-automated.png">
+					</section>	
+
+					<section data-background="white">
+						<img data-src="img/stages.png" alt="Down arrow">
+					</section>
+					<section data-background="white">
+						<h2>Machine Intelligence?</h2>
+						<p class="fragment">Some way in the middle of machine learning and consciousness</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Way forward!</h2>
+					<ul>
+						<li><a href="https://www.nltk.org/">NLTK (Python)</a></li>
+						<li><a href="https://deeplearning4j.org/">deeplearning4j (Java)</a></li>
+						<li><a href="http://opennlp.apache.org//">OpenNLP (Java)</a></li>
+						<li><a href="https://stanfordnlp.github.io/CoreNLP/">CoreNLP (Java)</a></li>
+						<li> Gensim (document similarity)</li>
+						<li> Spacy (high performance)</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Thank You!</h1>
+					<h1> 😀</h1>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
